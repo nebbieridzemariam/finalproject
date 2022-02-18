@@ -530,3 +530,111 @@ margin-top: -13px;
   color: white;
   transform: rotateY( 180deg );
 }
+.recommendations {
+  background-image: url("images/countdownbg.png");
+  height: 20rem;
+  width: 100%;
+  background-size: cover;
+}
+
+
+.slider, .slider .imgs {
+  width: 20rem;
+  height: 20rem;
+  max-height: 300px;
+  position: relative;
+  margin-left: 35%; 
+}
+
+.slider {
+  height: 100%;
+  max-height: 20rem;
+}
+
+.slider .imgs {
+  display: flex;
+  overflow: hidden;
+}
+.imgs {
+    width: 100%;
+}
+.slider .img {
+  width: 50%;
+  min-height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 100%;
+  /* animation duration can't be greater than variable interval in JS! */
+  /* check JS for other settings */
+  animation: .6s cubic-bezier(0.645, 0.045, 0.355, 1) 0s left;
+  animation-fill-mode: forwards;
+  background-size: cover !important;
+  background-position: 50% !important;
+  border-top-left-radius: 50% 50%; 
+  border-top-right-radius: 50% 50%; 
+  border-bottom-right-radius: 50% 50%; 
+  border-bottom-left-radius: 50% 50%; 
+}
+
+/* Change images here */
+.slider .img:nth-of-type(1) { background: url("https://images.pexels.com/photos/4075524/pexels-photo-4075524.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"); }
+.slider .img:nth-of-type(2) { background: url("https://images.pexels.com/photos/36764/marguerite-daisy-beautiful-beauty.jpg"); }
+.slider .img:nth-of-type(3) { background: url("https://wallpapercave.com/wp/9F6GsSn.jpg"); }
+.slider .img:nth-of-type(4) { background: url("https://k60.kn3.net/taringa/F/C/6/8/4/5/VCLR/3E9.jpg"); }
+
+.slider .img span {
+  padding: 7px 20px;
+  background: rgba(0, 0, 0, .8);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  color: #f0f0f0;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.dots {
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+  padding-bottom: 1rem;
+  justify-content: center;
+  width: 100%;
+  margin-left: 120%;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: gray;
+  margin: 0 3 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border: 2px solid salmon;  
+}
+
+.active-dot {
+  background: #3f3f3f;
+  cursor: default;
+}
+
+@keyframes leftNext {
+  from { left: 100%; }
+  to { left: 0; }
+}
+
+@keyframes leftCurr {
+  from { left: 0; }
+  to { left: -100%; }
+}
+
+@keyframes rightNext {
+  from { left: -100%; }
+  to { left: 0; }
+}
+
+@keyframes rightCurr {
+  from { left: 0; }
+  to { left: 100%; }
+}
