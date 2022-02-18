@@ -14,7 +14,7 @@
     height: 100%;
     width: 100%;
     object-fit: cover;
-    max-height: 500px;
+    max-height: 600px;
     
 }
 
@@ -24,7 +24,7 @@
 
 .headcontainer {
     width: 100%;
-    height: 500px;
+    height: 600px;
     position: relative;
 }
 .textabove {
@@ -187,14 +187,23 @@ margin-top: -13px;
   -moz-animation: fade-in-text 2.2s 0.1s forwards;
   animation: fade-in-text 2.2s 0.1s forwards;
   opacity: 0;
-  
+ 
 }
-
-
+.hide {
+    opacity:0;
+}
+.show {
+    opacity:1;
+    
+}
+.bar-one {
+    z-index: 111;
+     transition: all .5s;
+}
 .bar-graph-horizontal {
   max-width: 30%;
   width: 400px;
-  margin: 13% -15% 0 0;
+  margin: 13% -15% 0 0;    
 }
 
 .bar-graph-horizontal > div {
@@ -363,4 +372,84 @@ margin-top: -13px;
     color: aliceblue;
    
 }
+.grid-wrapper-services{
+			--auto-grid-min-size: 16rem;
+			display: grid;
+			grid-gap: 2rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+			margin: 10% auto;
+			padding: 0 10%;
+		}
+		.grid-wrapper-services div{
+			background-color: #FAFAFA;
+			color: #222222;
+			font-size: 18px;
+			padding: 6rem 1rem;
+			text-align: center;
+      font-weight: 600;
+      font-family: glacialindifferencebold;
+		}
+.main-cont-services{
+			margin: 0 auto;
+			max-width: 1972px;
+			padding: 2rem 1rem;
+    
+} 
 
+
+    .main-cont-services{
+			margin: 0 auto;
+			max-width: 1972px;
+			padding: 2rem 1rem;
+    
+    }
+
+  .back { 
+    display: none;
+  }
+  .back:hover {
+    display: block;
+  }
+/* .card {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  margin: -150px;
+  float: left;
+  perspective: 500px;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: white;
+  line-height: 300px;
+  color: #03446A;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #03446A;
+  color: white;
+  transform: rotateY( 180deg );
+} */

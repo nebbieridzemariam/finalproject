@@ -14,27 +14,22 @@ function show(){
     setTimeout(show, 3000);
 }
 
-// setTimeout(function start (){
-  
-//   $('.bar').each(function(i){  
-//     var $bar = $(this);
-//     $(this).append('<span class="count"></span>')
-//     setTimeout(function(){
-//       $bar.css('width', $bar.attr('data-percent'));      
-//     }, i*100);
-//   });
- 
-// $('.count').each(function () {
-//     $(this).prop('Counter',0).animate({
-//         Counter: $(this).parent('.bar').attr('data-percent')
-//     }, {
-//         duration: 2000,
-//         easing: 'swing',
-//         step: function (now) {
-//             $(this).text(Math.ceil(now) +'%');
-//         }
-//     });
-// });
- 
-// }, 500)
-// start ();
+
+id1 = document.getElementById("id1");
+id2 = document.getElementById("id2");
+id3 = document.getElementById("id3");
+id4 = document.getElementById("id4");
+
+
+var myScrollFunc = function () {
+    var y = window.scrollY;
+    if (y >= 300) {
+        id1.className = "bar-one"
+        id2.className = "bar-two"
+        id3.className = "bar-three"
+        id4.className = "bar-four"
+
+    }
+};
+
+window.addEventListener("scroll", myScrollFunc);
