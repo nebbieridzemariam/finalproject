@@ -30,3 +30,15 @@
     src: url(fonts/Muli.woff);
     src: url(fonts/Muli.woff2);
 }
+@font-face {
+    font-family: robotoreg;
+    src: url(fonts/Roboto-Regular.ttf);
+    c: url(fonts/Roboto-Regular.woff);
+    c: url(fonts/Roboto-Regular.woff2);
+}
+@font-face {
+    font-family: robotolight;
+    src: url(fonts/Roboto-Light.ttf);
+    c: url(fonts/Roboto-Light.woff);
+    c: url(fonts/Roboto-Light.woff2);
+}

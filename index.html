@@ -12,7 +12,7 @@
 
 <body>
     <section class="headcontainer">
-        <div class="slide-container">
+        <div>
             <div class="mypics effect slide">
                 <img src="images/me.jpeg" alt="image" class="mypic">
             </div>
@@ -334,27 +334,88 @@
         </div>
     </section>
     <section class="recommendations">
-        <!-- this slider can be used multiple times on the same page -->
-        <!-- don't change class names because slider will not work -->
-        <div class="slider">
-            <div class="imgs">
-                <!-- you can add divs with class img here and they will be 
-                     automatically added to slider -->
-                <!-- style="left: 0;" in case JS is disabled -->
-                <div class="img">
-                    <span>Image 1</span>
+        <div class="slide-container">
+            <div class="slideOne fade">
+                <div class="innerslide">
+                    <p class="recomText"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veniam esse
+                        accusamus impedit
+                        molestias,
+                        dicta placeat officia nihil? .</p>
+                    <img src='https://images.pexels.com/photos/428321/pexels-photo-428321.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                        alt=''>
+                    <div class="nameProfession">
+                        <p class="sliderprofession"> Web Designer </p>
+                        <br>
+                        <p class='recomName'> May Buffay </p>
+
+                    </div>
                 </div>
-                <div class="img">
-                    <span>Image 2</span>
+
+            </div>
+            <div class="slideOne fade">
+                <div class="innerslide">
+                    <p class="recomText"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veniam esse
+                        accusamus impedit
+                        molestias,
+                        dicta placeat officia nihil? .</p>
+
+                    <img src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+                        alt=''>
+                    <div class="nameProfession">
+                        <p class="sliderprofession"> Graphic Designer </p>
+                        <br>
+                        <p class='recomName'> George McColl </p>
+
+                    </div>
                 </div>
-                <div class="img">
-                    <span>Image 3</span>
-                </div>
-                <div class="img">
-                    <span>Image 4</span>
+
+            </div>
+            <div class="slideOne fade">
+                <div class="innerslide">
+                    <p class="recomText"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veniam esse
+                        accusamus impedit
+                        molestias,
+                        dicta placeat officia nihil? .</p>
+
+                    <img src='https://images.pexels.com/photos/871495/pexels-photo-871495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+                        alt=''>
+                    <div class="nameProfession">
+                        <p class="sliderprofession"> UI/UX Designer</p>
+                        <br>
+                        <p class='recomName'> Maria Rojas </p>
+
+                    </div>
                 </div>
             </div>
-            <div class="dots"></div>
+            <a href="#" class="prev" title="Previous">&#10094</a>
+            <a href="#" class="next" title="Next">&#10095</a>
+            <div class="dots-container">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="latestprojects">
+        <div class="projectsContainer flex">
+            <div class="filterItems">
+                <ul class="filters">
+                    <li class="filter" data-filter="all"> All</li>
+                    <li class="filter" data-filter="workideas"> Work Ideas</li>
+                    <li class="filter" data-filter="mockup"> Mockup</li>
+                    <li class="filter" data-filter="psddesign">PSD Design</li>
+                </ul>
+            </div>
+            <div class="projects">
+                <div class="projectItem" data-filter="workideas">workideas</div>
+                <div class="projectItem" data-filter="mockup">mockup</div>
+                <div class="projectItem hideOne" data-filter="psddesign">design</div>
+                <div class="projectItem" data-filter="mockup">mockup</div>
+                <div class="projectItem" data-filter="workideas">workideas</div>
+                <div class="projectItem" data-filter="psddesign">psddesign</div>
+            </div>
+
         </div>
     </section>
     <script src="app.js"></script>

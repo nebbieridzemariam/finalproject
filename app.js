@@ -33,90 +33,74 @@ var myScrollFunc = function () {
 };
 
 window.addEventListener("scroll", myScrollFunc);
-{
-  const sliders = document.querySelectorAll(".slider");
-  // interval between switching images
-  // can't be less than your animation duration in css!
-  const interval = 2800;
-  // if you don't want to first animation last longer than other animations  
-  // set animDuration (in miliseconds) to your value of animation duration in css
-  const animDuration = 600;
 
-  for (let i = 0; i < sliders.length; ++i) {
-    const slider = sliders[i];
-    const dots = slider.querySelector(".dots");
-    const sliderImgs = slider.querySelectorAll(".img");
 
-    let currImg = 0;
-    let prevImg = sliderImgs.length - 1;
-    let intrvl;
-    let timeout;
+let currentSlide = 0;
+const slideOne = document.querySelectorAll('.slideOne');
+const dots = document.querySelectorAll('.dot');
 
-    // Creates dots and add listeners to them
-    for (let i = 0; i < sliderImgs.length; ++i) {
-      const dot = document.createElement("div");
-      dot.classList.add("dot");
-      dots.appendChild(dot);
-      dot.addEventListener("click", dotClick.bind(null, i), false);
+const init = n => {
+  slideOne.forEach((slide, index) => {
+    slide.style.display = 'none';
+    dots.forEach((dot, index) => {
+      dot.classList.remove('active');
+    });
+  });
+  slideOne[n].style.display = 'block';
+  dots[n].classList.add('active');
+};
+document.addEventListener('DOMContentLoaded', init(currentSlide));
+const next = () => {
+  currentSlide >= slideOne.length - 1 ? (currentSlide = 0) : currentSlide++;
+  init(currentSlide);
+};
+
+const prev = () => {
+  currentSlide <= 0 ? (currentSlide = slideOne.length - 1) : currentSlide--;
+  init(currentSlide);
+};
+
+document.querySelector('.next').addEventListener('click', next);
+
+document.querySelector('.prev').addEventListener('click', prev);
+
+setInterval(() => {
+  next();
+}, 5000);
+
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    console.log(currentSlide);
+    init(i);
+    currentSlide = i;
+  });
+});
+
+const filters = document.querySelectorAll('.filter');
+
+filters.forEach(filter => { 
+
+  filter.addEventListener('click', function() {
+
+    let selectedFilter = filter.getAttribute('data-filter');
+    let itemsToHide = document.querySelectorAll(`.projects .projectItem:not([data-filter='${selectedFilter}'])`);
+    let itemsToShow = document.querySelectorAll(`.projects [data-filter='${selectedFilter}']`);
+
+    if (selectedFilter == 'all') {
+      itemsToHide = [];
+      itemsToShow = document.querySelectorAll('.projects [data-filter]');
     }
 
-    const allDots = dots.querySelectorAll(".dot");
-    allDots[0].classList.add("active-dot");
+    itemsToHide.forEach(el => {
+      el.classList.add('hideOne');
+      el.classList.remove('showOne');
+    });
 
-    sliderImgs[0].style.left = "0";
-    timeout = setTimeout(() => {
-      animateSlider();
-      sliderImgs[0].style.left = "";
-      intrvl = setInterval(animateSlider, interval);
-    }, interval - animDuration);   
+    itemsToShow.forEach(el => {
+      el.classList.remove('hideOne');
+      el.classList.add('showOne'); 
+    });
 
-    /**
-     * Animates images
-     * @param {number} [nextImg] - index of next image to show
-     * @param {boolean} [right = false] - animate to right
-     */
-    function animateSlider(nextImg, right) {
-      if (!nextImg)
-        nextImg = currImg + 1 < sliderImgs.length ? currImg + 2 : 1;
-
-      --nextImg;
-      sliderImgs[prevImg].style.animationName = "";
-
-      if (!right) {
-        sliderImgs[nextImg].style.animationName = "leftNext";
-        sliderImgs[currImg].style.animationName = "leftCurr";
-      } 
-      else {
-        sliderImgs[nextImg].style.animationName = "rightNext";
-        sliderImgs[currImg].style.animationName = "rightCurr";
-      }
-
-      prevImg = currImg;
-      currImg = nextImg;
-
-      currDot = allDots[currImg];
-      currDot.classList.add("active-dot");
-      prevDot = allDots[prevImg];
-      prevDot.classList.remove("active-dot");
-    }
-
-    /**
-     * Decides if animate to left or right and highlights clicked dot
-     * @param {number} num - index of clicked dot
-     */
-    function dotClick(num) {
-      if (num == currImg)
-        return false;
-
-      clearTimeout(timeout);
-      clearInterval(intrvl);
-
-      if (num > currImg)
-        animateSlider(num + 1);
-      else
-        animateSlider(num + 1, true);
-
-      intrvl = setInterval(animateSlider, interval);
-    }
-  }
-}
+  });
+});
+ 
