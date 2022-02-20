@@ -690,27 +690,32 @@ margin-top: -13px;
 .item2 {
   background-image: url(images/2nd.jpg);
   background-size:cover;
+  position: relative;
 }
 .item3 {
   background-image: url(images/3rd.jpg);
   background-size:cover;
  background-size: 100% 100%;
+ position: relative;
   
 }
 .item4 {
   background-image: url(images/4th.jpg);
   background-size:cover;
   background-size: 100% 100%;
+  position: relative;
 }
 .item5 {
   background-image: url(images/5th.jpg);
   background-size:cover;
   background-size: 100% 100%;
+  position: relative;
 }
 .item6 {
   background-image: url(images/6th.jpg);
   background-size:cover;
   background-size: 100% 100%;
+  position: relative;
 }
 ul {
   list-style: none;
@@ -759,12 +764,98 @@ ul {
   text-align: center;
   padding-top: 3rem;
 }
-.card_text {
+.card_text,
+.card_text1,
+.card_text2 {
   position: absolute;
   opacity: 0;
   padding-top: 40%;
-  padding-left: 25% ;
+  padding-left: 5%;
+  width: 100%;
+  height: 100%;
+  font-family: 'glacialindifferencebold';
+  font-size: 1rem;
+
 }
-.projectItem:hover.card_text {
+.card_text:hover,
+.card_text1:hover,
+.card_text2:hover{
  opacity: 1;  
+ background: rgba(0, 0, 0, 0.7);
+ background-size: 100% 100%;
+}
+.latestArticles {
+  /* display: grid;
+  grid-template-rows: auto auto auto; */
+  width: 100%;
+  min-height: 900px;
+}
+.articleBox {
+  width: 90%;
+  background-color: #FAFAFA;
+  float: right;
+  height: 33%;
+}
+.articleBox1 {
+  width: 90%;
+  background-color: #FAFAFA;
+  float: left;
+  height: 33%;
+}
+.articleText {
+  width: 45%;
+}
+.innerartText {
+  padding: 10%;
+  line-height: 26pt;
+  
+}
+.innerartText p {
+  font-family: 'muli';
+  font-size: 15px;
+color: #161616;
+  
+}
+a {
+  text-decoration: none;
+}
+.innerartText h4 {
+  font-family: 'glacialindifferencebold';
+  font-size: 1rem;
+  color: #161616;
+}
+.innerartText svg:hover {
+  background-color: #E93656;
+}
+.blueLine {
+  width: 10%;
+  background-color: #15263E;
+  min-height: 100%;
+ position: relative;
+} 
+.articleImage,
+.articleImage2,
+.articleImage3 {
+  width: 45%;
+  min-height: 100%;
+  object-fit: contain;
+  background-size: 100% 100%;
+}
+.articleImage {
+ background-image: url(images/article1.jpg);
+}
+.articleImage2 {
+  background-image: url(images/article2.jpg);
+}
+.articleImage3 {
+  background-image: url(images/article3.jpg);
+}
+.date {
+  transform: rotate(-90deg); 
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  font-family: 'glacialindifferencebold';
+  font-size: 1rem;
+  color: #FAFAFA;
 }
