@@ -723,11 +723,11 @@ ul {
   padding-left: 35%;
   
 }
-.hideOne { /* You can play with the seconds to change the "animation" */
+.hideOne {
   animation: hide .5s ease 0s 1 normal forwards;
   transform-origin: center;
 }
-.showOne { /* You can play with the seconds to change the "animation" */
+.showOne { 
     animation: show .5s ease 0s 1 normal forwards;    
     transform-origin: center;
 }
@@ -785,10 +785,7 @@ ul {
  background-size: 100% 100%;
 }
 .latestArticles {
-  /* display: grid;
-  grid-template-rows: auto auto auto; */
   width: 100%;
-  min-height: 900px;
 }
 .articleBox {
   width: 90%;
@@ -823,12 +820,13 @@ a {
   font-family: 'glacialindifferencebold';
   font-size: 1rem;
   color: #161616;
+  text-transform: uppercase;
 }
 .innerartText svg:hover {
   background-color: #E93656;
 }
 .blueLine {
-  width: 10%;
+  width: 11.5%;
   background-color: #15263E;
   min-height: 100%;
  position: relative;
@@ -859,3 +857,80 @@ a {
   font-size: 1rem;
   color: #FAFAFA;
 }
+.latestArticles h3 {
+  font-family: 'glacialindifferencebold';
+  font-size: 3rem;
+  color: #222222;
+  text-align: center;
+  padding: 3rem;
+}
+.clients { 
+  width: 100%;
+}
+
+.clientsPics {
+  justify-content: space-evenly;
+  min-height: 500px;
+  padding: 10%;
+}
+.clientItem1,
+.clientItem2,
+.clientItem3,
+.clientItem4 {
+  width: 20%;
+ background-size: 100% 100%;
+  min-height: 20%;
+  position: relative;
+}
+.clientItem1 {
+  background-image: url(images/client1.png);
+  position: relative;
+}
+.clientItem2 {
+  background-image: url(images/client2.png);
+}
+.clientItem3 {
+  background-image: url(images/client3.png);
+}
+.clientItem4 {
+  background-image: url(images/client4.png);
+}
+.clients h2 {
+  font-family: 'glacialindifferencebold';
+  font-size: 3rem;
+  color: #222222;
+  text-align: center;
+  padding: 3rem;
+
+}
+
+
+.clientCard1,
+.clientCard2,
+.clientCard3,
+.clientCard4 {
+  background-color: #fafafa;
+  color: #626262;
+  font-family: 'robotoreg';
+  font-size: 0,8rem;
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  border: 5px solid #E93656;
+  opacity: 0;
+  top: -20%;
+  left: -10%;
+  text-align: center;
+  padding: 10%;
+  padding-top: 30%;
+  line-height: 1.5rem;
+
+}
+.clientCard1:hover{
+  opacity: 1;
+}
+.clientName {
+  font-family: 'poppins';
+  font-size: 1.5rem;
+}
+

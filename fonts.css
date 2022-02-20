@@ -42,3 +42,9 @@
     c: url(fonts/Roboto-Light.woff);
     c: url(fonts/Roboto-Light.woff2);
 }
+@font-face {
+    font-family: poppins;
+    src: url(fonts/Poppins-SemiBold.ttf);
+    src: url(fonts/Poppins-SemiBold.woff);
+    src: url(fonts/Poppins-SemiBold.woff2);
+}
