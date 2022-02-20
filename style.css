@@ -372,38 +372,6 @@ margin-top: -13px;
     color: aliceblue;
    
 }
-/* .grid-wrapper-services{
-			--auto-grid-min-size: 16rem;
-			display: grid;
-			grid-gap: 2rem;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-			margin: 10% auto;
-			padding: 0 10%;
-      position: relative;
-		}
-		.grid-wrapper-services div{
-			background-color: #FAFAFA;
-			color: #222222;
-			font-size: 18px;
-			padding: 6rem 1rem;
-			text-align: center;
-      font-weight: 600;
-      font-family: glacialindifferencebold;
-		}
-.main-cont-services{
-			margin: 0 auto;
-			max-width: 1972px;
-			padding: 2rem 1rem;
-    
-} 
-
-
-    .main-cont-services{
-			margin: 0 auto;
-			max-width: 1972px;
-			padding: 2rem 1rem;
-    
-    } */
 
 
 .grid {
@@ -668,13 +636,26 @@ margin-top: -13px;
    color: #FAFAFA;
 }
 .filterItems {
-  width: 25%;
+  width: 15%;
   margin-top: 15%;
   margin-bottom: 10%;
   margin-left: 10%;
   background-color: #15263E;
-  height: 400px;
+  height: 300px;
   
+  
+}
+
+.filter {
+  color:#FAFAFA;
+  font-family: 'glacialindifferencebold';
+  font-size: 15px;
+  padding-bottom: 30px;
+  
+}
+.filter:hover {
+  cursor: pointer;
+  color:#E93656
 }
 .projectsContainer {
   justify-content: space-between;
@@ -688,7 +669,7 @@ margin-top: -13px;
   width: 60%;
   min-height: 600px;
   margin-top: 10%;
-  margin-right: 2%;
+  margin-right: 8%;
   margin-bottom: 10%;
 }
 .projectItem {
@@ -699,11 +680,43 @@ margin-top: -13px;
 	text-transform: capitalize;
   font-weight: 600;
   width: 100%;
-  height: 100%;
+  height: 100%;  
+}
+.item1 {
+  background-image: url(images/1st.jpg);
+  background-size:cover;
+  position: relative;
+}
+.item2 {
+  background-image: url(images/2nd.jpg);
+  background-size:cover;
+}
+.item3 {
+  background-image: url(images/3rd.jpg);
+  background-size:cover;
+ background-size: 100% 100%;
   
+}
+.item4 {
+  background-image: url(images/4th.jpg);
+  background-size:cover;
+  background-size: 100% 100%;
+}
+.item5 {
+  background-image: url(images/5th.jpg);
+  background-size:cover;
+  background-size: 100% 100%;
+}
+.item6 {
+  background-image: url(images/6th.jpg);
+  background-size:cover;
+  background-size: 100% 100%;
 }
 ul {
   list-style: none;
+  padding-top: 20%;
+  padding-left: 35%;
+  
 }
 .hideOne { /* You can play with the seconds to change the "animation" */
   animation: hide .5s ease 0s 1 normal forwards;
@@ -735,4 +748,23 @@ ul {
   100% {
     transform: scale(1);    
   }
+}
+.posterImage {
+  object-fit: cover;
+}
+.latestprojects h3 {
+  font-family: 'glacialindifferencebold';
+  font-size: 3rem;
+  color: #222222;
+  text-align: center;
+  padding-top: 3rem;
+}
+.card_text {
+  position: absolute;
+  opacity: 0;
+  padding-top: 40%;
+  padding-left: 25% ;
+}
+.projectItem:hover.card_text {
+ opacity: 1;  
 }
