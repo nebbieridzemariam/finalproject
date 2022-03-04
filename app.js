@@ -102,5 +102,53 @@ filters.forEach(filter => {
     });
 
   });
+  });
+
+
+const userForm = document.getElementById('form');
+const userName = document.getElementById('name');
+const userEmail = document.getElementById('email');
+const userWebsite = document.getElementById('website');
+const userMessage = document.getElementById('message');
+
+userForm.addEventListener('submit', e =>{
+    e.preventDefault();
+    const userData ={
+        name: userName.value,
+        email: userEmail.value,
+        website: userWebsite.value,
+        message: userMessage.value,
+    }
+    console.log(userData);
+    createUser(userData);
 });
- 
+
+function createUser(userData){
+    const createUserRequest = fetch('http://api.kesho.me/v1/user-test/contact',{
+        method: 'POST',
+        body: JSON.stringify(userData),
+        headers: {
+            'Content-type': 'application/json'
+        }
+    });
+    createUserRequest.then(response =>{
+        return response.json();
+    }).then(data => {
+        console.log(data);
+    }).catch(error =>{
+        console.log(error);
+    });
+}
+
+
+const btn = document.getElementById('sendBtn');
+const popUp = document.querySelector('.modal');
+const close = document.querySelector('.close');
+
+
+btn.addEventListener('click', e =>{
+    popUp.style.display = 'block';
+});
+close.addEventListener('click', e=>{
+    popUp.style.display = "none";
+});
