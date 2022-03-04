@@ -7,8 +7,6 @@
 .mypics {
     max-height: 500px;
     width: 100%;
-    /* object-fit: cover; */
-
 }
 .mypic {
     height: 100%;
@@ -34,10 +32,6 @@
     color: #dbd6d6;
     justify-content: space-around;
        
-}
-.logo {
-    /* margin-left: 40px; */
-    
 }
 .rocalogo {
     font-family: poppinsextrabold;
@@ -89,8 +83,6 @@ margin-top: -13px;
     width: 130px;
     justify-content: space-around;
     margin-left: 0%;
-    /* position: absolute;
-    top: 40%; */
 }
 .introduction {
     text-align: center;
@@ -129,7 +121,6 @@ margin-top: -13px;
 .infoaboutme {
     width: 70%;
     text-align: right;
-    /* margin: 15% 0 0 30%; */
     margin-left: 50%;
     margin-top: 45%;
 }
@@ -274,7 +265,7 @@ margin-top: -13px;
 .redpercentage {
     color: #E93656;
 }
-/* Bar Graph Horizontal Animations */
+
 @-webkit-keyframes show-bar-one {
   0% {
     width: 0;
@@ -348,6 +339,10 @@ margin-top: -13px;
 .personalinfo svg {
     width: 70px;
     height: 70px;
+}
+.personalinfo svg:hover {
+  background-color: #E93656;
+  border-radius: 50%;
 }
 .contactbox {
     margin-top: 30px;
@@ -921,9 +916,7 @@ a {
 }
 .contactSection {
     background-image: url(images/map.jpg);
-    object-fit: cover;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("images/map.jpg");
-    background-repeat: no-repeat;
 }
 .contactus{
     position: relative;
